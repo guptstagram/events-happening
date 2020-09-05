@@ -6,7 +6,7 @@ const LoggedInNavs=()=>{
         <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li><NavLink to="/addEvent">Add Event</NavLink></li>
             <li><NavLink to="/Logout">Log Out</NavLink></li>
-            <li><NavLink to="/profile">Sourabh</NavLink></li>
+            <li><NavLink to="/">Sourabh</NavLink></li>
         </ul>
     )
 }
