@@ -13,7 +13,7 @@ const EventCard=({event})=>{
             </div>
             <div className="card-reveal">
                 <span className="card-title grey-text text-darken-4">{event.eventName}<i className="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                <p>{event.eventAbout}</p>
                 <p className="indigo-text text-darken-3">Happening on {event.eventDate} in {event.eventPlace}</p>
                 <p className="blue-text text-darken-3">Posted by ABCD</p>
             </div>
