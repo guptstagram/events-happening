@@ -1,13 +1,14 @@
 import React from 'react';
 import EventCard from "./EventCard";
 
-const EventList=()=>{
+const EventList=({events})=>{
     return(
         <>
-            <EventCard/>
-            <EventCard/>
-            <EventCard/>
-            <EventCard/>
+        {events && events.map(event=>{
+            return(
+                <EventCard event={event} key={event.id}/>
+            )
+        })}
         </>
     )
 }
