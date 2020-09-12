@@ -1,4 +1,6 @@
 import React from "react";
+import {connect} from "react-redux";
+import {createEvent} from "../../store/actions/eventActions";
 import M from 'materialize-css';
 
 class CreateEvent extends React.Component{
@@ -12,7 +14,7 @@ class CreateEvent extends React.Component{
 
     handleSubmit=(e)=>{
         e.preventDefault();
-        console.log(this.state);
+        this.props.createEvent(this.state);
     }
 
     handleChange=(e)=>{
@@ -80,4 +82,10 @@ class CreateEvent extends React.Component{
     }
 }
 
-export default CreateEvent;
+const mapDispatchToProps=(dispatch)=>{
+    return {
+        createEvent:(event)=>dispatch(createEvent(event))
+    }
+}
+
+export default connect(null,mapDispatchToProps)(CreateEvent);

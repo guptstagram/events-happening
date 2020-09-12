@@ -18,6 +18,13 @@ const initState={
 }
 
 const eventReducer=(state=initState,action)=>{
+    switch (action.type) {
+        case "CREATE_EVENT":
+            console.log("created event",action.event);
+    
+        default:
+            break;
+    }
     return state;
 }
 
