@@ -1,5 +1,5 @@
 export const createEvent=(event)=>{
-    return (dispatch,getState)=>{
+    return (dispatch,getState,{getFirebase,getFirestore})=>{
         dispatch({type:"CREATE_EVENT",event:event});
     }
 }
